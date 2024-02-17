@@ -8,6 +8,38 @@
   font-size: normal;
 }
 
+/* scroll bar */
+
+body {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #20ab65;
+  --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  border: 1px solid #232e33;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+
+
 .bus {
   color: rgb(29, 209, 0);
   padding: 0.7em 1.7em;
