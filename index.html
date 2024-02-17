@@ -22,34 +22,67 @@
     <header class="lg:w-[1171px] mx-3 lg:mx-auto mt-12">
         <!-- nav bar -->
         <nav class="flex justify-between items-center">
-            <h1 class="text-2xl lg:text-4xl font-extrabold text-[#030712]">A-Travels</h1>
-            <ul class="space-x-14 font-medium text-lg hidden lg:flex">
-                <li><a href="#" class="text-[#030712]">Home</a></li>
-                <li><a href="#" class="text-[#030712]">About</a></li>
-                <li><a href="#" class="text-[#030712]">Destination</a></li>
-                <li><a href="#" class="text-[#030712]">Search</a></li>
+            <h1 class="text-3xl lg:text-4xl font-extrabold text-[#030712]">
+                A-Travels
+            </h1>
+            <ul class="space-x-14 font-medium text-lg hidden lg:flex text-[#030712B3]">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Destination</a></li>
             </ul>
-            <button class="bus hidden lg:flex gap-3 text-sm lg:text-xl">Bus
-                <img src="./images/bus-icon.png" alt="">
+            <button class="bus hidden lg:flex gap-3 text-sm lg:text-xl">
+                Bus
+                <img src="./images/bus-icon.png" alt="" />
             </button>
 
             <!-- dropdown for mobile view -->
             <div class="dropdown dropdown-end lg:hidden">
-                <div tabindex="0" role="button" class="btn m-1 bg-[#1DD101] bg-opacity-10 border-[#1DD101] border-opacity-40">Menu</div>
-                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36 ">
+                <div tabindex="0" role="button"
+                    class="btn m-1 bg-[#1DD101] bg-opacity-10">
+                    Menu
+                </div>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36">
                     <li><a href="#" class="text-[#030712]">Home</a></li>
                     <li><a href="#" class="text-[#030712]">About</a></li>
-                    <li><a href="#" class="text-[#030712]">Destination</a></li>
+                    <li>
+                        <a href="#" class="text-[#030712]">Destination</a>
+                    </li>
                     <li><a href="#" class="text-[#030712]">Search</a></li>
-                    <button class="bus gap-3 text-sm lg:text-xl w-full flex justify-around">Bus
-                        <img src="./images/bus-icon.png" alt="">
+                    <button class="bus gap-3 text-sm lg:text-xl w-full flex justify-around">
+                        Bus
+                        <img src="./images/bus-icon.png" alt="" />
                     </button>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
-        
+    <main class="lg:w-[1171px] mx-3 lg:mx-auto mt-8">
+        <!-- banner section -->
+        <section class="text-center text-white rounded-[32px] banner" style="
+                    background: linear-gradient(
+                            180deg,
+                            rgba(3, 7, 18, 0.5),
+                            rgba(3, 7, 18, 0) 100%
+                        ),
+                        url(./images/banner.png);
+                    background-size: cover;
+                    background-position: center;
+                ">
+            <div class="lg:pt-20 lg:pb-40 pt-5 pb-5">
+                <h2 class="font-extrabold text-4xl lg:text-6xl">
+                    End-to-End Travel with <br />
+                    <span class="text-[#1DD101]">A-Travels</span>
+                </h2>
+                <p class="text-base lg:text-lg mt-4">
+                    Booking tickets shouldn't be a hassle. Let us show you
+                    how easy it can be. <br />
+                    From couch to concert in a few clicks. <br />
+                    Experience the joy of effortless ticketing.
+                </p>
+                <button class="btn mt-8">Buy Tickets</button>
+            </div>
+        </section>
     </main>
     <footer></footer>
     <script src="script.js"></script>
