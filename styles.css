@@ -2,4 +2,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: normal;
+}
+.bus {
+  color: rgb(29, 209, 0);
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: rgba(29, 209, 0, 0.1);
+  cursor: pointer;
+  border: 1px solid rgba(29, 209, 0, 0.4);
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.bus:active {
+  color: rgba(29, 209, 0, 0.5);
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }

@@ -1,22 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind and DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>A-Travels</title>
-    <link rel="shortcut icon" href="./images/bus-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/bus-icon.png" type="image/x-icon" />
+    <!-- Custom font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <header>
-        <nav></nav>
+    <header class="lg:w-[1171px] mx-3 lg:mx-auto mt-12">
+        <!-- nav bar -->
+        <nav class="flex justify-between items-center">
+            <h1 class="text-2xl lg:text-4xl font-extrabold text-[#030712]">A-Travels</h1>
+            <ul class="space-x-14 font-medium text-lg hidden lg:flex">
+                <li><a href="#" class="text-[#030712]">Home</a></li>
+                <li><a href="#" class="text-[#030712]">About</a></li>
+                <li><a href="#" class="text-[#030712]">Destination</a></li>
+                <li><a href="#" class="text-[#030712]">Search</a></li>
+            </ul>
+            <button class="bus hidden lg:flex gap-3 text-sm lg:text-xl">Bus
+                <img src="./images/bus-icon.png" alt="">
+            </button>
+
+            <!-- dropdown for mobile view -->
+            <div class="dropdown dropdown-end lg:hidden">
+                <div tabindex="0" role="button" class="btn m-1 bg-[#1DD101] bg-opacity-10 border-[#1DD101] border-opacity-40">Menu</div>
+                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36 ">
+                    <li><a href="#" class="text-[#030712]">Home</a></li>
+                    <li><a href="#" class="text-[#030712]">About</a></li>
+                    <li><a href="#" class="text-[#030712]">Destination</a></li>
+                    <li><a href="#" class="text-[#030712]">Search</a></li>
+                    <button class="bus gap-3 text-sm lg:text-xl w-full flex justify-around">Bus
+                        <img src="./images/bus-icon.png" alt="">
+                    </button>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
-
+        
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="script.js"></script>
 </body>
+
 </html>
