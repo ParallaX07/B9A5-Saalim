@@ -25,6 +25,8 @@ const seatCount = document.querySelector('#noOfSeats');
 
 // table for selected seats
 const selectedSeats = document.querySelector('#selectedSeats');
+const remainingSeats = document.querySelector('#remainingSeats');
+const totalPrice = document.querySelector('#totalPrice');
 
 // check if a seat was clicked
 function isSeatClicked(event) {
@@ -41,7 +43,7 @@ function isSeatSelected(event) {
 function selectSeat(event) {
   event.target.classList.add('bg-green-500', 'text-white');
   seatCount.textContent = Number(seatCount.textContent) + 1;
-
+  enableCouponButton();
   // Create a new row and cells
   const newRow = selectedSeats.insertRow();
   const cell1 = newRow.insertCell();
@@ -52,18 +54,37 @@ function selectSeat(event) {
   cell1.textContent = event.target.id; 
   cell2.textContent = 'Economy'; 
   cell3.textContent = '550'; 
+  totalPrice.textContent = Number(totalPrice.textContent) + 550;
+  remainingSeats.textContent = Number(remainingSeats.textContent) - 1;
+  
 }
 
 // deselect a seat
 function deselectSeat(event) {
   event.target.classList.remove('bg-green-500', 'text-white');
   seatCount.textContent = Number(seatCount.textContent) - 1;
+  enableCouponButton();
 
   // Delete the corresponding row
   const rows = Array.from(selectedSeats.rows);
   const rowIndex = rows.findIndex(row => row.cells[0].textContent === event.target.id);
   if (rowIndex !== -1) {
     selectedSeats.deleteRow(rowIndex);
+    totalPrice.textContent = Number(totalPrice.textContent) - 550;
+    remainingSeats.textContent = Number(remainingSeats.textContent) + 1;
+  }
+}
+
+const couponButton = document.querySelector('#applyCoupon');
+const couponInput = document.querySelector('#couponCode');
+
+function enableCouponButton() {
+  if (Number(seatCount.textContent) >= 4) {
+    couponButton.disabled = false;
+    couponInput.disabled = false;
+  } else {
+    couponInput.disabled = true;
+    couponButton.disabled = true;
   }
 }
 
