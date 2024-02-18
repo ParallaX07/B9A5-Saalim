@@ -58,7 +58,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* button styles */
-.btn {
+.btn-tickets .btn {
   width: fit-content;
   height: 2.3em;
   margin: 0.5em;
@@ -75,11 +75,11 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-button:hover {
+.btn-tickets button:hover {
   color: black;
 }
 
-button:after {
+.btn-tickets button:after {
   content: "";
   background: white;
   position: absolute;
@@ -92,7 +92,7 @@ button:after {
   transition: all 0.5s;
 }
 
-button:hover:after {
+.btn-tickets button:hover:after {
   transform: skewX(-45deg) scale(1, 1);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
