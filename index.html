@@ -38,11 +38,11 @@
 
             <!-- dropdown for mobile view -->
             <div class="dropdown dropdown-end lg:hidden">
-                <div tabindex="0" role="button"
-                    class="btn m-1 bg-[#1DD101] bg-opacity-10">
+                <div tabindex="0" role="button" class="btn m-1 bg-[#1DD101] bg-opacity-10">
                     Menu
                 </div>
-                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36 text-[#030712B3]">
+                <ul tabindex="0"
+                    class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36 text-[#030712B3]">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li>
@@ -89,21 +89,36 @@
         <!-- best offers section -->
         <section>
             <div class="flex flex-col">
-                <h2 class="lg:mx-auto text-3xl lg:text-4xl font-extrabold text-[#030712] mt-5 lg:mt-48">
+                <h2 class="mx-auto text-3xl lg:text-4xl font-extrabold text-[#030712] mt-5 lg:mt-48">
                     Best Offers for you
                 </h2>
+                <!-- coupons -->
                 <div class="flex flex-col lg:flex-row gap-6 lg:mt-12 mt-8">
-                    <div class="bg-[#FFBF0F] p-14 rounded-3xl w-full text-center">
-                        <h3 class="text-2xl font-bold text-[#030712]">
-                            50% off on your first booking
-                        </h3>   
-
+                    <!-- coupon 1 -->
+                    <div class="bg-[#FFC120] border-none rounded-3xl flex flex-col lg:flex-row justify-evenly items-center text-[#030712] w-full">
+                        <div class="lg:p-10 p-2">
+                            <h2 class="text-[40px] font-black text-[#030712CC]">15% OFF</h2>
+                            <p class="text-xl font-semibold text-[#030712CC]">on your next purchase</p>
+                            <p class="text-lg font-medium text-[#03071280]">use by January 2024</p>
+                        </div>
+                        <img class="h-full hidden md:flex" src="./images/cupon-devider.png" alt="">
+                        <div class="lg:p-10 p-2">
+                            <p class="text-3xl text-[#030712] font-bold">NEW15</p>
+                            <p class="text-xl text-[#03071266] font-medium">Coupon Code</p>
+                        </div>
                     </div>
-                    <div class="bg-[#F78C9C] p-14 rounded-3xl w-full text-center">
-                        <h3 class="text-2xl font-bold text-[#030712]">
-                            50% off on your first booking
-                        </h3>   
-
+                    <!-- coupon 2 -->
+                    <div class="bg-[#F78C9C] border-none rounded-3xl flex flex-col lg:flex-row justify-evenly items-center text-[#030712] w-full">
+                        <div class="lg:p-10 p-2">
+                            <h2 class="text-[40px] font-black text-[#030712CC]">20% OFF</h2>
+                            <p class="text-xl font-semibold text-[#030712CC]">on your next purchase</p>
+                            <p class="text-lg font-medium text-[#03071280]">use by January 2024</p>
+                        </div>
+                        <img class="h-full hidden md:flex" src="./images/cupon-devider.png" alt="">
+                        <div class="lg:p-10 p-2">
+                            <p class="text-3xl text-[#030712] font-bold">Couple20</p>
+                            <p class="text-xl text-[#03071266] font-medium">Coupon Code</p>
+                        </div>
                     </div>
                 </div>
             </div>
