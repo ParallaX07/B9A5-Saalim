@@ -7,7 +7,7 @@
     <!-- Tailwind and DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>A-Travels</title>
+    <title>S-Travels</title>
     <link rel="shortcut icon" href="./images/bus-icon.png" type="image/x-icon" />
     <!-- Custom font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,7 @@
         <!-- nav bar -->
         <nav class="flex justify-between items-center">
             <h1 class="text-3xl lg:text-4xl font-extrabold text-[#030712]">
-                A-Travels
+                S-Travels
             </h1>
             <ul class="space-x-14 font-medium text-lg hidden lg:flex text-[#030712B3]">
                 <li><a href="#">Home</a></li>
@@ -31,7 +31,7 @@
                 <li><a href="#">Search</a></li>
                 <li><a href="#">Destination</a></li>
             </ul>
-            <button class="bus hidden lg:flex gap-3 text-sm lg:text-xl">
+            <button class="bus hidden lg:flex gap-3 text-sm lg:text-xl buy-tickets">
                 Bus
                 <img src="./images/bus-icon.png" alt="" />
             </button>
@@ -49,7 +49,7 @@
                         <a href="#">Destination</a>
                     </li>
                     <li><a href="#">Search</a></li>
-                    <button class="bus gap-3 text-sm lg:text-xl w-full flex justify-around">
+                    <button class="bus gap-3 text-sm lg:text-xl w-full flex justify-around buy-tickets">
                         Bus
                         <img src="./images/bus-icon.png" alt="" />
                     </button>
@@ -57,9 +57,9 @@
             </div>
         </nav>
     </header>
-    <main class="lg:w-[1171px] mx-3 lg:mx-auto mt-8">
+    <main class="mt-8">
         <!-- banner section -->
-        <section class="text-center text-white rounded-[32px] banner" style="
+        <section class="lg:w-[1171px] mx-3 lg:mx-auto text-center text-white rounded-[32px] banner" style="
                     background: linear-gradient(
                             180deg,
                             rgba(3, 7, 18, 0.5),
@@ -72,22 +72,22 @@
             <div class="lg:pt-20 lg:pb-40 pt-5 pb-5">
                 <h2 class="font-extrabold text-4xl lg:text-6xl">
                     End-to-End Travel with <br />
-                    <span class="text-[#1DD101]">A-Travels</span>
+                    <span class="text-[#1DD101]">S-Travels</span>
                 </h2>
                 <p class="text-base lg:text-lg mt-4">
                     Booking tickets shouldn't be a hassle. Let us show you
                     how easy it can be. <br />
-                    From couch to concert in a few clicks. <br />
+                    From your couch to your destination in a few clicks. <br />
                     Experience the joy of effortless ticketing.
                 </p>
                 <div class="btn-tickets">
-                    <button class="btn mt-8">Buy Tickets</button>
+                    <button class="btn mt-8 buy-tickets">Buy Tickets</button>
                 </div>
             </div>
         </section>
 
         <!-- best offers section -->
-        <section>
+        <section class="lg:w-[1171px] mx-3 lg:mx-auto">
             <div class="flex flex-col">
                 <h2 class="mx-auto text-3xl lg:text-4xl font-extrabold text-[#030712] mt-5 lg:mt-48">
                     Best Offers for you
@@ -95,7 +95,7 @@
                 <!-- coupons -->
                 <div class="flex flex-col lg:flex-row gap-6 lg:mt-12 mt-8">
                     <!-- coupon 1 -->
-                    <div class="bg-[#FFC120] border-none rounded-3xl flex flex-col lg:flex-row justify-evenly items-center text-[#030712] w-full">
+                    <div class="bg-[#FFC120] border-none rounded-3xl flex flex-col md:flex-row justify-evenly items-center text-[#030712] w-full">
                         <div class="lg:p-10 p-2">
                             <h2 class="text-[40px] font-black text-[#030712CC]">15% OFF</h2>
                             <p class="text-xl font-semibold text-[#030712CC]">on your next purchase</p>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <!-- coupon 2 -->
-                    <div class="bg-[#F78C9C] border-none rounded-3xl flex flex-col lg:flex-row justify-evenly items-center text-[#030712] w-full">
+                    <div class="bg-[#F78C9C] border-none rounded-3xl flex flex-col md:flex-row justify-evenly items-center text-[#030712] w-full">
                         <div class="lg:p-10 p-2">
                             <h2 class="text-[40px] font-black text-[#030712CC]">20% OFF</h2>
                             <p class="text-xl font-semibold text-[#030712CC]">on your next purchase</p>
@@ -123,6 +123,61 @@
                 </div>
                 <button id="offerButton" class="text-[#1DD100] py-5 px-7 border-2 w-fit border-[#1DD100] rounded-xl mx-auto lg:mt-16 mt-4" onclick="offerButton()">See all offers</button>
             </div>
+        </section>
+
+        <!-- purchase ticket section -->
+        <section id="purchase-tickets" class="bg-[#F7F8F8] border-t-2 border-[#1DD100] lg:mt-[120px] mt-8 lg:p-[120px] pt-8 px-3">
+            <!-- heading text -->
+            <div class="text-center lg:max-w-[736px] mx-auto">
+                <h2 class="text-black font-bold lg:text-[40px] text-3xl">S-Travels</h2>
+                <p class="lg:text-lg text-base text-black text-opacity-60 lg:mt-6 mt-4">
+                    Adventure's a tap away with S-Travels!  Book your next bus trip in seconds, ditch the lines & stress.  Transparent pricing, comfy seats, endless possibilities.  Hop on board & make memories that last! <br>✨ Don't let the good seats slip away - book now!</p>
+            </div>
+            <!-- ticket card -->
+            <div class="bg-white rounded-3xl lg:mt-12 mt-8 flex flex-col lg:flex-row">
+                <div class="lg:p-8 p-4">
+                    <div class="flex flex-col justify-center gap-y-6 lg:flex-row text-center lg:justify-between lg:text-start">
+                        <div class="flex items-center">
+                            <img class="max-h-[48px]" src="./images/bus-logo.png" alt="">
+                            <div class="ml-2">
+                                <h2 class="font-bold text-[#030712] text-2xl lg:text-4xl">Starline Paribahan</h2>
+                                <p class="text-[#03071299] text-base lg:text-lg">Coach-009 | AC Economy</p>
+                            </div>
+                        </div>
+                        <!-- seats info -->
+                        <div class="flex items-center px-4 py-3 bg-[#1DD10026] rounded-xl w-fit">
+                            <img class="max-h-[21px] min-w-[21px]" src="./images/seat-green.png" alt="">
+                            <p class="text-[#1DD100] font-medium text-lg ml-2"><span id="remainingSeats">40</span> seats left</p>
+                        </div>
+                    </div>
+                    <!-- routing info -->
+                    <div class="lg:p-8 p-4 lg:min-w-[808px] lg:max-w-[808px] bg-[#F7F8F8] mt-6 rounded-3xl text-[#03071299] text-lg space-y-6">
+                        <div class="flex justify-between font-semibold">
+                            <p>Route</p>
+                            <p class="text-[#030712]">Dhaka - Sylhet</p>
+                        </div>
+                        <hr class="border-b-2 border-dashed">
+                        <div class="flex justify-between font-semibold">
+                            <p>Departure Time</p>
+                            <p class="text-[#030712]">9:00 pm</p>
+                        </div>
+                        <hr class="border-b-2 border-dashed">
+                        <div class="flex flex-col lg:flex-row gap-6 justify-between text-black text-base font-medium">
+                            <div class="bg-[#030712] bg-opacity-5 p-4 rounded-xl">Boarding Point - Uttar Badda</div>
+                            <div class="bg-[#030712] bg-opacity-5 p-4 rounded-xl">Dropping Point - Sylhet City </div>
+                            <div class="bg-[#030712] bg-opacity-5 p-4 rounded-xl">Est. Time 11 Hours</div>
+                        </div>
+                    </div>
+                </div>
+                <img class="min-h-full hidden lg:flex" src="./images/info-devider.png" alt="">
+                <div class="flex lg:flex-col gap-7 max-w-fit mx-auto justify-center items-center lg:py-32 py-10 text-center">
+                    <img class="size-10" src="./images/fare.png" alt="">
+                    <p class="text-3xl font-bold text-[#030712]">550 Taka <br> <span class="text-2xl text-[#030712] text-opacity-60 font-semibold">Per Seat</span></p>
+                </div>
+            </div>
+
+            <!-- ticket selection -->
+            
         </section>
     </main>
     <footer></footer>
