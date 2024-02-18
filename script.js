@@ -23,6 +23,9 @@ function smoothScroll(className) {
 const seats = document.querySelector('.seats-container'); // Select the parent element
 const seatCount = document.querySelector('#noOfSeats');
 
+// table for selected seats
+const selectedSeats = document.querySelector('#selectedSeats');
+
 // check if a seat was clicked
 function isSeatClicked(event) {
   const elementId = event.target.id;
@@ -38,12 +41,30 @@ function isSeatSelected(event) {
 function selectSeat(event) {
   event.target.classList.add('bg-green-500', 'text-white');
   seatCount.textContent = Number(seatCount.textContent) + 1;
+
+  // Create a new row and cells
+  const newRow = selectedSeats.insertRow();
+  const cell1 = newRow.insertCell();
+  const cell2 = newRow.insertCell();
+  const cell3 = newRow.insertCell();
+
+  // Add text to the cells
+  cell1.textContent = event.target.id; 
+  cell2.textContent = 'Economy'; 
+  cell3.textContent = '550'; 
 }
 
 // deselect a seat
 function deselectSeat(event) {
   event.target.classList.remove('bg-green-500', 'text-white');
   seatCount.textContent = Number(seatCount.textContent) - 1;
+
+  // Delete the corresponding row
+  const rows = Array.from(selectedSeats.rows);
+  const rowIndex = rows.findIndex(row => row.cells[0].textContent === event.target.id);
+  if (rowIndex !== -1) {
+    selectedSeats.deleteRow(rowIndex);
+  }
 }
 
 // event listener for seats-container
@@ -56,5 +77,7 @@ seats.addEventListener('click', (event) => {
     }
   }
 });
+
+
 
 smoothScroll(".buy-tickets");
