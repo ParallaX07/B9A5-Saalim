@@ -4,9 +4,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: normal;
 }
+
 
 /* scroll bar */
 
@@ -14,6 +13,8 @@ body {
   --sb-track-color: #232E33;
   --sb-thumb-color: #20ab65;
   --sb-size: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: normal;
 }
 
 body::-webkit-scrollbar {
@@ -340,4 +341,8 @@ body::-webkit-scrollbar-thumb {
     gap: 0.5em 0.5em;
     /* reduce the gap for mobile view */
   }
+}
+
+.font-inter{
+  font-family: "Inter", sans-serif;
 }

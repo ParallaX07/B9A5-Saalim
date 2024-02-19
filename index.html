@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
 </head>
@@ -191,7 +194,7 @@
 
             <!-- ticket purchase -->
             <div
-                class="lg:w-[1171px] lg:mx-auto mx-3 flex flex-col lg:flex-row mt-6 gap-8 bg-white rounded-3xl lg:p-8 p-3">
+                class="lg:w-[1171px] font-inter lg:mx-auto mx-3 flex flex-col lg:flex-row mt-6 gap-8 bg-white rounded-3xl lg:p-8 p-3">
                 <div>
                     <h2 class="text-black font-semibold text-2xl">Select Your Seat</h2>
                     <hr class="border-2 border-dashed mt-6 mb-5">
@@ -212,7 +215,7 @@
                     </div>
                     <!-- seats selection -->
                     <div
-                        class="seats-container text-sm lg:text-lg font-normal lg:font-medium text-gray-500 lg:max-w-[609px]">
+                        class="seats-container font-inter text-sm lg:text-lg font-normal lg:font-medium text-gray-500 lg:max-w-[609px]">
                         <div class="A">
                             <p>A</p>
                         </div>
@@ -368,12 +371,12 @@
                 </div>
                 <!-- seating info and form -->
                 <div class="hidden lg:flex border-2 border-dashed"></div>
-                <div class="w-full">
+                <div class="w-full font-inter">
                     <h2 class="text-black font-semibold text-2xl">Order Details</h2>
                     <hr class="border-2 border-dashed mt-6 mb-5">
-                    <div class="bg-[#F7F8F8] w-full lg:p-8 p-3 rounded-xl">
+                    <div class="bg-[#F7F8F8] w-full lg:p-8 p-3 rounded-xl mb-6">
                         <!-- table for seats -->
-                        <table class="w-full table-auto text-left">
+                        <table class="w-full font-inter table-auto text-left">
                             <thead>
                                 <tr class="mb-4  border-b-2 border-dashed">
                                     <th class="w-auto">Seat <span id="noOfSeats"
@@ -416,7 +419,8 @@
                                     <p class="mt-4">Please try again</p>
                                     <div class="modal-action">
                                         <form method="dialog">
-                                            <button class="mt-4 py-4 px-20 bg-red-500 text-white w-fit rounded-[32px]">Close</button>
+                                            <button
+                                                class="mt-4 py-4 px-20 bg-red-500 text-white w-fit rounded-[32px]">Close</button>
                                         </form>
                                     </div>
                                 </div>
@@ -429,9 +433,42 @@
                         </div>
                     </div>
 
-                    <form action="">
-
+                    <form id="form" class="font-semibold text-black space-y-4">
+                        <label for="name">Name *</label>
+                        <input
+                            class="w-full font-normal p-4 lg:p-6 border-[#0307121A] rounded-xl mb-6 bg-white border-2 focus:outline-none"
+                            type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <label for="phoneNumber">Phone Number *</label>
+                        <input
+                            class="w-full font-normal p-4 lg:p-6 border-[#0307121A] rounded-xl mb-6 bg-white border-2 focus:outline-none"
+                            type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"
+                            required>
+                        <label for="email">Email</label>
+                        <input
+                            class="w-full font-normal p-4 lg:p-6 border-[#0307121A] rounded-xl mb-6 bg-white border-2 focus:outline-none"
+                            type="email" id="email" name="email" placeholder="Enter your email">
+                        <button
+                            id="submit"
+                            class="w-full font-extrabold text-xl py-4 bg-[#1DD100] text-white rounded-2xl mt-4 disabled:cursor-not-allowed disabled:opacity-50" disabled>Next</button>
                     </form>
+                    <dialog id="submitForm" class="modal">
+                        <div class="modal-box flex flex-col items-center justify-center lg:w-[718px]">
+                            <img src="./images/success.png" alt="">
+                            <h3 class="font-bold text-2xl text-[#27AE60]">Success</h3>
+                            <p class="mt-4 text-xl font-medium">Thank you for your booking. <br>We are always working hard to provide you with the best service and deals for you.</p>
+                            <p class="mt-4 text-xl font-light">You will receive a confirmation email shortly.</p>
+                            <div class="modal-action">
+                                <form method="dialog">
+                                    <button
+                                        class="mt-4 py-4 px-20 bg-[#27AE60] text-white w-fit rounded-[32px]">Continue</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
+                    <div class="mt-6 flex flex-col lg:flex-row text-black text-opacity-60 justify-around">
+                        <p class="underline hover:cursor-pointer">Terms and Conditions</p>
+                        <p class="underline hover:cursor-pointer">Cancellation Policy</p>
+                    </div>
                 </div>
             </div>
 
