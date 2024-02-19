@@ -62,7 +62,7 @@
     </header>
     <main class="mt-8">
         <!-- banner section -->
-        <section class="lg:w-[1171px] mx-3 lg:mx-auto text-center text-white rounded-[32px] banner" style="
+        <section class="lg:w-[1171px] mx-3 lg:mx-auto text-center text-white rounded-[32px] banner relative" style="
                     background: linear-gradient(
                             180deg,
                             rgba(3, 7, 18, 0.5),
@@ -87,7 +87,54 @@
                     <button class="btn mt-8 buy-tickets">Buy Tickets</button>
                 </div>
             </div>
+            <div class=" hidden lg:flex gap-6  left-24 absolute bottom-[-60px] font-inter ">
+                <div class="flex items-center p-8 w-[308px] rounded-3xl bg-white border-b-4 border-[#1DD101]">
+                    <img src="./images/people.png" alt="">
+                    <div class="text-start ml-4">
+                        <p class="text-3xl font-bold text-black">500K+</p>
+                        <p class="text-lg text-gray-600">Registered Users</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-8 w-[308px] rounded-3xl bg-white border-b-4 border-[#1DD101]">
+                    <img src="./images/ticket-cupon.png" alt="">
+                    <div class="text-start ml-4">
+                        <p class="text-3xl font-bold text-black">170k</p>
+                        <p class="text-lg text-gray-600">Tickets Sold</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-8 w-[308px] rounded-3xl bg-white border-b-4 border-[#1DD101]">
+                    <img src="./images/stoppage.png" alt="">
+                    <div class="text-start ml-4">
+                        <p class="text-3xl font-bold text-black">80k+</p>
+                        <p class="text-lg text-gray-600">Rental Partners</p>
+                    </div>
+                </div>
+            </div>
         </section>
+        <!-- mobile view cards -->
+        <div class="flex flex-col lg:hidden gap-6 m-3">
+            <div class="flex items-center p-8 w-full rounded-3xl bg-white border-b-4 border-[#1DD101]">
+                <img src="./images/people.png" alt="">
+                <div class="text-start ml-4">
+                    <p class="text-3xl font-bold text-black">500K+</p>
+                    <p class="text-lg text-gray-600">Registered Users</p>
+                </div>
+            </div>
+            <div class="flex items-center p-8 w-full rounded-3xl bg-white border-b-4 border-[#1DD101]">
+                <img src="./images/ticket-cupon.png" alt="">
+                <div class="text-start ml-4">
+                    <p class="text-3xl font-bold text-black">170k</p>
+                    <p class="text-lg text-gray-600">Tickets Sold</p>
+                </div>
+            </div>
+            <div class="flex items-center p-8 w-full rounded-3xl bg-white border-b-4 border-[#1DD101]">
+                <img src="./images/stoppage.png" alt="">
+                <div class="text-start ml-4">
+                    <p class="text-3xl font-bold text-black">80k+</p>
+                    <p class="text-lg text-gray-600">Rental Partners</p>
+                </div>
+            </div>
+        </div>
 
         <!-- best offers section -->
         <section class="lg:w-[1171px] mx-3 lg:mx-auto">
