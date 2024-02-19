@@ -69,6 +69,7 @@ function selectSeat(event) {
     totalPrice.textContent = Number(totalPrice.textContent) + 550;
     grandTotal.textContent = totalPrice.textContent;
     remainingSeats.textContent = Number(remainingSeats.textContent) - 1;
+    checkRequiredFields();
 }
 
 // deselect a seat
@@ -87,6 +88,7 @@ function deselectSeat(event) {
         totalPrice.textContent = Number(totalPrice.textContent) - 550;
         grandTotal.textContent = totalPrice.textContent;
         remainingSeats.textContent = Number(remainingSeats.textContent) + 1;
+        checkRequiredFields();
     }
 }
 
@@ -141,24 +143,25 @@ const phoneNumberInput = document.querySelector("#phoneNumber");
 const submitButton = document.querySelector("#submit");
 const submitFormDialog = document.querySelector("#submitForm");
 
-// check if the required fields are filled
+// check if at least 1 seat is selected and the required fields are filled
 function checkRequiredFields() {
-    if (nameInput.value && phoneNumberInput.value) {
+    if (nameInput.value && phoneNumberInput.value && Number(seatCount.textContent) > 0) {
         submitButton.disabled = false;
     } else {
         submitButton.disabled = true;
     }
 }
 
+// Add input event listeners to the input fields
+nameInput.addEventListener('input', checkRequiredFields);
+phoneNumberInput.addEventListener('input', checkRequiredFields);
+
+
 //how the dialog when the form is submitted
 function handleSubmit(event) {
     event.preventDefault();
     submitFormDialog.showModal();
 }
-
-//event listeners for input fields
-nameInput.addEventListener("input", checkRequiredFields);
-phoneNumberInput.addEventListener("input", checkRequiredFields);
 
 // submit button
 form.addEventListener("submit", handleSubmit);
